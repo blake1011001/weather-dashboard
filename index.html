@@ -9,30 +9,34 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <h1>Weather Dashboard</h1>
-
-        <form id="search-area">
-            <input id="city" type="text" placeholder="City" name="City">
-            <button id="search-button">Search</button>
-        </form>
-    </section>
-
-    <section class="weather-info col">
-        <div class="current-weather"></div>
-        <div class="container">
-            <div id="forecast" class="row align-items-start">
-            
-            </div>
-        </div>
-    </section>
-    </div>
-    </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"></script>
-    <script src="./assets/script.js"></script>
+    <h1>Weather Dashboard</h1>
+    <h3> Search for a City:</h3>
+
+        <form id="searchArea">
+            <input id="city" type="text" placeholder="City" name="City">
+            <button id="searchButton">Search</button>
+        </form>
+
+        <section class="weatherInfo col">
+            <div class="currentWeather"></div>
+            <div class="container">
+                <div id="forecast" class="row align-items-start">
+                
+                </div>
+            </div>
+        </section>
+
+        <div id="searchHistory"></div>
+        <div class="col2">
+            <div id='fiveDay' class='row spacebetween'></div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src='./assets/js/script.js'></script>
 </body>
 </html>
