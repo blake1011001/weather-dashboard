@@ -5,38 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    </head>
 <body>
-    
-    <h1>Weather Dashboard</h1>
-    <h3> Search for a City:</h3>
+    <header class="container-fluid mt-2 p-3">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="container-fluid">
+        <section class="row">
+            <div class="col-sm-4">
+                <h4 class="pt-1"><strong>Search for a City: </strong></h4>
+                <div class="input-group mb-3 pt-1">
+                    <input type="text" class="form-control"id="searched-city" aria-label="City Search" aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="button" id="clear-history">Clear History</button>
+                <ul class="list-group">
 
-        <form id="searchArea">
-            <input id="city" type="text" placeholder="City" name="City">
-            <button id="searchButton">Search</button>
-        </form>
+                </ul>
+            </div>
+            <div class="col-sm-8">
+                <div class="curWeather col-sm-12" id="current-weather">
+                    <h2 class="city-name bolder" id="current-city"></h2>
+                    <p>Temperature:<span class="current" id="temperature"></span></p>
+                    <p>Humidity:<span class="current" id="humidity"></span></p> 
+                    <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                </div>
+            </div>
 
-        <section class="weatherInfo col">
-            <div class="currentWeather"></div>
-            <div class="container">
-                <div id="forecast" class="row align-items-start">
-                
+            <div class="col-sm-12" id ="future-weather">
+                <h4 class="pt-1"><strong>5 Day Forecast:</strong></h3>
+                <div class="row">
+                    <div class="futWeather col-sm-2 forecast ml-2 mb-3 p-2 mt-2 rounded" >
+                        <p class="futDate" id="futDate0"></p>
+                        <p>Temp:<span id="futTemp0"></span></p>
+                        <p>Humidity:<span id="futHumidity0"></span></p>
+                        <p>Wind Speed:<span id="futWindspeed0"></span></p>
+                    </div>
+                    <div class="futWeather col-sm-2 forecast ml-2 mb-3 p-2 mt-2 rounded" >
+                        <p class="futDate" id="futDate1"></p>
+                        <p>Temp:<span id="futTemp1"></span></p>
+                        <p>Humidity:<span id="futHumidity1"></span></p>
+                        <p>Wind Speed:<span id="futWindspeed1"></span></p>
+                    </div>
+                    <div class="futWeather col-sm-2 forecast ml-2 mb-3 p-2 mt-2 rounded">
+                        <p class="futDate" id="futDate2"></p>
+                        <p>Temp:<span id="futTemp2"></span></p>
+                        <p>Humidity:<span id="futHumidity2"></span></p>
+                        <p>Wind Speed:<span id="futWindspeed2"></span></p>
+                    </div>
+                    <div class="futWeather col-sm-2 forecast ml-2 mb-3 p-2 mt-2 rounded">
+                        <p class="futDate" id="futDate3"></p>
+                        <p>Temp:<span id="futTemp3"></span></p>
+                        <p>Humidity:<span id="futHumidity3"></span></p>
+                        <p>Wind Speed:<span id="futWindspeed3"></span></p>
+                    </div>
+                    <div class="futWeather col-sm-2 forecast ml-2 mb-3 p-2 mt-2 rounded" >
+                        <p class="futDate" id="futDate4"></p>
+                        <p>Temp:<span id="futTemp4"></span></p>
+                        <p>Humidity:<span id="futHumidity4"></span></p>
+                        <p>Wind Speed:<span id="futWindspeed4"></span></p>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <div id="searchHistory"></div>
-        <div class="col2">
-            <div id='fiveDay' class='row spacebetween'></div>
-        </div>
-    
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-        <script src='./assets/script.js'></script>
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/script.js"></script>
 </html>

@@ -1,9 +1,5 @@
-.currentWeather {
-    border-color: skyblue;
-    border-width: 4px;
-    border-style: dashed;
-    border-radius: 10px;
-    padding: 15px;
+:root {
+    background-color: oldlace;
 }
 
 .container {
@@ -14,8 +10,22 @@
     width: max-content;
 }
 
+
 h1 {
     text-align: center;
     background-color:lightslategray;
     color: skyblue;
 }
+
+.curWeather {
+    background-color: lightslategray;
+    color: skyblue;
+    border-radius: 10px;
+}
+
+.futWeather {
+    background-color: lightslategray;
+    color: skyblue;
+    border-radius: 10px;
+}
+
