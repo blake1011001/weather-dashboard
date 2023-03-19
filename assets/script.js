@@ -25,7 +25,6 @@ clearBtn.on("click", function(event) {
 
 function currentWeather(city) {
     let currentDay = dayjs().format("MM/DD/YYYY");
-    // URL for a request
     "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}"
     let requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${APIkey}`; 
     fetch(requestURL).
@@ -88,7 +87,6 @@ function addToList(c){
     $(".list-group").append(listEl);
 }
 
-// Gets passed cities from storage
 function loadlastCity(){
     $("ul").empty();
     let prevCity = JSON.parse(localStorage.getItem("cityname"));
@@ -102,7 +100,6 @@ function loadlastCity(){
     }
 }
 
-// display the past search when the list group item is clicked in search history
 function invokePastSearch(event){
     let liEl = event.target;
     if (event.target.matches("li")){
@@ -111,7 +108,6 @@ function invokePastSearch(event){
     }
 }
 
-//Clear the search history from the page
 function clearHistory(event){
     event.preventDefault();
     history=[];
